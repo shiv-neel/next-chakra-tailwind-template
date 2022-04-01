@@ -1,9 +1,9 @@
 import { extendTheme } from '@chakra-ui/react'
-import '@fontsource/roboto'
+import '@fontsource/ibm-plex-sans'
 
 export const theme = extendTheme({
-    fonts: {
-        heading: 'Roboto, sans-serif',
-        body: 'Roboto, sans-serif',
-    }
+	fonts: {
+		heading: 'IBM Plex Sans',
+		body: 'IBM Plex Sans',
+	},
 })

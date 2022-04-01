@@ -7,8 +7,8 @@ const Navbar = () => {
 		<Box>
 			<ul className='flex space-x-10 justify-end py-4 px-10 items-center border-b-2'>
 				<li className='mr-auto'>Logo</li>
-				<Link href='/'>
-					<li className='cursor-pointer hover:underline'>Page 1</li>
+				<Link href='/animes'>
+					<li className='cursor-pointer hover:underline'>My Animes</li>
 				</Link>
 				<Link href='/'>
 					<li className='cursor-pointer hover:underline'>Page 2</li>

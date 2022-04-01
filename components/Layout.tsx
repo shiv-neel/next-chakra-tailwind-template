@@ -7,7 +7,7 @@ const Layout: React.FC = ({ children }) => {
 	return (
 		<Box>
 			<Navbar />
-			<Box margin={'0 auto 33%'}>{children}</Box>
+			<Box>{children}</Box>
 			<Footer />
 		</Box>
 	)

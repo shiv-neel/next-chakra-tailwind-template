@@ -1,14 +1,7 @@
-import { Box, Heading } from '@chakra-ui/react'
-import type { NextPage } from 'next'
+import React from 'react'
 
-const Home: NextPage = () => {
-	return (
-		<Box className='mx-48'>
-			<Heading as='h1' py={10}>
-				Hello Next.js
-			</Heading>
-		</Box>
-	)
+const Home = () => {
+	return <div>index</div>
 }
 
 export default Home
