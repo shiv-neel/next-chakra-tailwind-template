@@ -1,4 +1,4 @@
-import { Grid } from '@chakra-ui/react'
+import { Box, Grid, Heading } from '@chakra-ui/react'
 import axios from 'axios'
 import { NextPage } from 'next'
 import Link from 'next/link'
@@ -26,7 +26,11 @@ export const MY_ANIMES = [
 ]
 const Index: NextPage<AnimeResponse> = ({ myAnimes }) => {
 	return (
-		<div>
+		<Box>
+			<Heading as='h1'>My Animes</Heading>
+			<Heading as='h2' size='lg'>
+				Currently Watching
+			</Heading>
 			<Grid templateColumns={'repeat(5, 1fr)'} pt={5}>
 				{myAnimes.map((a) => (
 					<Link href={'/animes/' + a.id}>
@@ -36,12 +40,15 @@ const Index: NextPage<AnimeResponse> = ({ myAnimes }) => {
 					</Link>
 				))}
 			</Grid>
-		</div>
+			<Heading as='h2' size='lg'>
+				Need to Watch
+			</Heading>
+		</Box>
 	)
 }
 
 // runs at build time, not in browser
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 	var animes: AnimeResponse[] = []
 	for (let i = 0; i < MY_ANIMES.length; i++) {
 		const res = await axios.get(
