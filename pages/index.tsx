@@ -1,7 +1,13 @@
+import { Box } from '@chakra-ui/react'
 import React from 'react'
+import Board from '../components/Board'
 
 const Home = () => {
-	return <div>index</div>
+	return (
+		<Box>
+			<Board />
+		</Box>
+	)
 }
 
 export default Home
